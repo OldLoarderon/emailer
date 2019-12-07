@@ -11,35 +11,22 @@ file = pd.read_excel('email_DB.xlsx', sheet_name = 'Sheet1')
 contacts=pd.DataFrame(file)
 password = mycred()[1]
 
+# Whereas class must be initiated with pd method foo.iloc[i]
 for i in range(len(contacts)):
     email, name, address=contacts.iloc[i]
     port = 143
     #INSERT YOUR SMTP PORT HERE
     smtp_server = "465"
 
-    # Creating mail message
+    # Creating mail message using MIMEMultipart
     msg = MIMEMultipart()
     msg['From'] = mycred()[0]
     msg['To'] = email
-    msg['Subject'] = "YCA FV 11/2019r"
-    body = "Dzień dobry,"
+    msg['Subject'] = "Lorem ipsum"
+    body = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+    "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+    " Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 
-"W załączeniu faktura za zajęcia w listopadzie."
-"Jednocześnie będę wdzięczny za kilka słów, czy jest Pani zadowolona z realizacji i przebiegu moich zajęć"
-
-
-"Serdecznie pozdrawiam,"
-"""
-"<br>"
-"""
-"Jan Mawusi"
-"Chief Operations Officer\Tutor"
-"+48 534 530 322"
-"""
-<a href="https://www.facebook.com/codersYoung"><img alt="Young Coders Academy Facebook Page" src="https://i.imgur.com/eJhxC4p.png" width="150" height="40"></a>
-"""
-
-# Whereas class kiddos must be initiated with pd method foo.iloc[i]
 
     msg.attach(MIMEText(body, 'plain'))
     text = msg.as_string()

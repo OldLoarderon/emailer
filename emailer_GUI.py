@@ -6,6 +6,10 @@ from email.mime.multipart import  MIMEMultipart
 from email.mime.text import MIMEText
 from emailer.py import *
 
+
+'''
+THIS ONE I ONLY JUST STARTED DOING
+'''
 root=Tk()
 root.title("Mawu's Email sender")
 mainframe = ttk.Frame(root, padding = "3 3 12 12")

@@ -2,17 +2,17 @@
 
 # Hi all, Janek here. Just wanted to let you know how to work about this piece:
 
-					1. Fill secrets.py with credentials to your mail's account (;
+		1. Fill secrets.py with credentials to your mail's account (;
 		
-					2. Research (MPS) your mail provider's port, SMTP port. 
-					FYI We're going to also include ssl socket;
+		2. Research (MPS) your mail provider's port, SMTP port. 
+			FYI We're going to also include ssl socket;
 	
 		3. Now's the time for Database feed! That's basically the first lines of code:
 			- connecting pandas to database of your choosing (be that, e.g. excel file or cloud hostage);
 			- initiating pandas method to iterate through your mail within correct port coordinates;
 			
-					4. Now we can create desired message along with it's subject. 
-						Also assign its both receving and delivering ends. 
+		4. Now we can create desired message along with it's subject. 
+			Also assign its both delivering and receving ends. 
 		
 		5. Last part's about scripting the message and how toto deliver to the appropriate customer:
 			- attaching message to MIMEMultipart ( it makes sense for library, 
